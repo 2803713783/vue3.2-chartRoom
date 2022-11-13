@@ -13,6 +13,7 @@
     "@unocss/reset": "^0.46.4",
     "@vueuse/core": "^9.5.0",
     "axios": "^1.1.3",
+    "hover.css": "^2.3.2",
     "unocss": "^0.46.4",
     "vue": "^3.2.41",
     "vue-router": "4",

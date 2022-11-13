@@ -5,34 +5,6 @@ import Middle from './Middle.vue'
 import Right from './Right.vue'
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </script>
 
 
@@ -46,13 +18,13 @@ import Right from './Right.vue'
                 <a-layout-sider style="width: 1vw;">
                     <Left1 />
                 </a-layout-sider>
-                <a-layout-sider :resize-directions="['right']">
+                <a-layout-sider style="width: 20vw;">
                     <Left2 />
                 </a-layout-sider>
                 <a-layout-content>
                     <Middle />
                 </a-layout-content>
-                <a-layout-sider :resize-directions="['left']">
+                <a-layout-sider style="width: 25vw;" :resize-directions="['left']">
                     <Right />
                     <a-layout-footer>Footer</a-layout-footer>
                 </a-layout-sider>
@@ -91,17 +63,17 @@ import Right from './Right.vue'
 .layoutAll :deep(.arco-layout-footer) {
     height: 10vh;
 
-    background-color: var(--color-primary-light-4);
+    // background-color: var(--color-primary-light-4);
 }
 
 .layoutAll :deep(.arco-layout-sider) {
-    background-color: var(--color-primary-light-3);
-    max-width: 20vw;
+    //background-color: var(--color-primary-light-3);
+    max-width: 25vw;
     min-width: 4vw;
 }
 
 .layoutAll :deep(.arco-layout-content) {
-    background-color: rgb(var(--arcoblue-6));
+    background-color: aliceblue;
 
 }
 </style>

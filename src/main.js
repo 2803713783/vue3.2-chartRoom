@@ -2,7 +2,7 @@ import {
     createApp
 } from 'vue'
 import ArcoVue from '@arco-design/web-vue';
-
+import ArcoVueIcon from '@arco-design/web-vue/es/icon';
 import App from './App.vue'
 import router from './router/index'
 import '@arco-design/web-vue/dist/arco.css';
@@ -18,7 +18,7 @@ import '@unocss/reset/tailwind.css'
 import './style.css'
 /** 引入uno.css，不引入不生效 */
 import 'uno.css'
-
+import 'hover.css'
 //状态
 import store from './store'
-createApp(App).use(ArcoVue).use(router).use(store).mount('#app')
+createApp(App).use(ArcoVue).use(ArcoVueIcon).use(router).use(store).mount('#app')

@@ -16,7 +16,7 @@ const props = defineProps({
         default: '1.5em'
     },
 })
-const dark = ref(0)
+const dark = ref(1)
 const isDark = useDark()
 const toggleDark = useToggle(isDark)
 const changeDark = () => {
