@@ -17,8 +17,8 @@
                     description="Ltd. is an enterprise located in China.">
                     <template #avatar>
                         <a-badge :count="9" color="#00B42A" :dotStyle="{ width: '10px', height: '10px' }">
-                            <a-avatar shape="square" :size="50">
-                                <img alt="avatar" src="/src/assets/touxiang2.png" />
+                            <a-avatar :size="50">
+                                <img alt="avatar" src="/src/assets/qingtou1.jpg" />
                             </a-avatar>
                         </a-badge>
                     </template>
@@ -35,7 +35,7 @@
 
     .search {
         height: 7%;
-        box-shadow: 0px 7px 7px -7px #5E5E5E;
+        box-shadow: 0px 2px 5px -2px #5E5E5E;
         // margin: 20px 0;
         padding: 1% 10px;
         position: fixed;
@@ -52,10 +52,10 @@
 }
 
 .listItem {
-    margin: 5px 0;
+    margin: 4px 0;
     box-sizing: border-box;
     overflow: hidden;
-    box-shadow: rgb(51, 94, 179) 0px 10px 30px -10px;
+    box-shadow: rgb(51, 94, 179) 5px 5px 20px -10px;
     width: 96%;
     border-radius: 8px;
 }

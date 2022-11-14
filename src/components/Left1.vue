@@ -17,7 +17,7 @@ const size1 = ref(props.size)
 
 <template>
     <div class="background" arcoblue-6>
-        <a-avatar shape="square" class="hvr-grow" :size="40" mt-10 :style="{ width: '3vw', height: '3vw' }">
+        <a-avatar class="hvr-grow" :size="40" mt-10 :style="{ width: '3vw', height: '3vw' }">
             <img alt="avatar" src="/src/assets/touxiang1.jpg" />
         </a-avatar>
         <div class="icons" flex flex-col justify-center>

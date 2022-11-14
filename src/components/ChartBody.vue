@@ -42,7 +42,7 @@ import { ref, reactive } from 'vue'
             </div>
         </div>
 
-        <div v-for="idx in 1" :key="idx" class="messageRight flex justify-end m-10">
+        <div v-for="idx in 20" :key="idx" class="messageRight flex justify-end m-10">
             <div class="rtouxiang  flex items-end ">
                 <a-avatar class="hvr-grow" :size="50" :style="{ width: '2vw', height: '2vw' }">
                     <img alt="avatar" src="/src/assets/touxiang2.png" />
@@ -60,8 +60,11 @@ import { ref, reactive } from 'vue'
 .background {
     height: 100%;
     width: 100%;
+    max-height: 85vh;
     //   background-color: var(--color-primary-light-1);
-    background-color: #ffffff;
+    background-color: #e9f1f8;
+    overflow: scroll;
+    overflow-x: hidden;
 
     .messageLeft {
         min-height: 6vh;
@@ -78,6 +81,7 @@ import { ref, reactive } from 'vue'
             border-width: 10px;
             border-radius: 50%;
             // box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
         }
 
         .lmessage {
@@ -89,8 +93,9 @@ import { ref, reactive } from 'vue'
             margin-bottom: 20px;
             background-color: #bedaff;
             color: #335eb3;
-            border-radius: 16px;
+            border-radius: 8px;
             height: max-content;
+            box-shadow: rgb(51, 94, 179) 5px 5px 20px -10px;
 
             .lmessageBodyBottom {
                 font-size: .8rem;
@@ -108,7 +113,7 @@ import { ref, reactive } from 'vue'
         position: relative;
 
         .rtouxiang {
-            z-index: 3;
+
             margin-left: 10px;
             position: absolute;
             bottom: 0;
@@ -129,18 +134,18 @@ import { ref, reactive } from 'vue'
             margin-bottom: 20px;
             background-color: #335eb3;
             color: #fff;
-            border-radius: 16px;
+            border-radius: 8px;
             height: max-content;
             display: flex;
             flex-direction: column;
             align-items: end;
+            box-shadow: rgb(51, 94, 179) 5px 5px 20px -10px;
 
             .rmessageBodyBottom {
                 font-size: .8rem;
                 margin: 5px 10px 0 0;
                 color: #fff;
                 right: 0;
-
                 display: block;
                 width: max-content;
                 border-top: 1px solid #c9cdd4;

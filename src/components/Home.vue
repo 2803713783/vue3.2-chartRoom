@@ -55,16 +55,13 @@ import Right from './Right.vue'
 }
 
 .layoutAll :deep(.arco-layout-header) {
-    height: 8vh;
-    background-color: var(--color-primary-light-4);
+    height: 7vh;
+    //background-color: var(--color-primary-light-4);
+    background-color: #335eb3;
 }
 
 
-.layoutAll :deep(.arco-layout-footer) {
-    height: 10vh;
 
-    // background-color: var(--color-primary-light-4);
-}
 
 .layoutAll :deep(.arco-layout-sider) {
     //background-color: var(--color-primary-light-3);

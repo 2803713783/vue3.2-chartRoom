@@ -2,7 +2,7 @@
     <div class="background">
         <div class="top flex justify-start items-center p-l-10 ">
             <a-badge class="hvr-float-shadow" :count="9" color="#00B42A" :dotStyle="{ width: '10px', height: '10px' }">
-                <a-avatar shape="square" :size="50" :style="{ width: '2vw', height: '2vw' }">
+                <a-avatar :size="50" :style="{ width: '2vw', height: '2vw' }">
                     <img alt="avatar" src="/src/assets/touxiang2.png" />
                 </a-avatar>
             </a-badge>
@@ -13,7 +13,6 @@
         </div>
         <div class=" mainView ">
             <a-layout style="height: 100%">
-
                 <a-layout-content class="chartBody">
                     <ChartBody />
                 </a-layout-content>
@@ -35,6 +34,8 @@ import ChartFooter from './ChartFooter.vue';
     //background-color: #6666FF;
     height: 100%;
     width: 100%;
+    background-color: #fff;
+    position: relative;
 
     .top {
         height: 7%;
@@ -52,14 +53,13 @@ import ChartFooter from './ChartFooter.vue';
         }
     }
 
-
     .mainView {
         top: 1%;
         position: relative;
         border-radius: 16px;
         margin: auto;
-        height: 91%;
-        width: 98%;
+        height: 91.5%;
+        width: 99%;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
         :deep(.arco-layout-footer) {
@@ -67,6 +67,10 @@ import ChartFooter from './ChartFooter.vue';
         }
 
         .chartBody {
+            position: relative;
+            top: 0;
+            height: 90%;
+            box-sizing: border-box;
             border-top-left-radius: 8px;
             border-top-right-radius: 8px;
         }
@@ -74,6 +78,8 @@ import ChartFooter from './ChartFooter.vue';
         .sendBody {
             border-bottom-left-radius: 8px;
             border-bottom-right-radius: 8px;
+            bottom: 0;
+            height: 10%;
         }
 
     }
