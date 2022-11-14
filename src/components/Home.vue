@@ -15,10 +15,10 @@ import Right from './Right.vue'
                 <sunOrMoonVue :size="sunOrMoonSize"></sunOrMoonVue>
             </a-layout-header> -->
             <a-layout class="layoutBody">
-                <a-layout-sider style="width: 1vw;">
+                <a-layout-sider style="width: 4vw;">
                     <Left1 />
                 </a-layout-sider>
-                <a-layout-sider style="width: 20vw;">
+                <a-layout-sider style="width: 25vw;">
                     <Left2 />
                 </a-layout-sider>
                 <a-layout-content>
@@ -69,7 +69,7 @@ import Right from './Right.vue'
 .layoutAll :deep(.arco-layout-sider) {
     //background-color: var(--color-primary-light-3);
     max-width: 25vw;
-    min-width: 4vw;
+
 }
 
 .layoutAll :deep(.arco-layout-content) {

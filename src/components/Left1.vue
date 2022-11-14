@@ -3,7 +3,7 @@ import { ref } from 'vue';
 const props = defineProps({
     src: {
         type: String,
-        default: 'src/assets/touxiang1.jpg'
+        default: '/src/assets/touxiang1.jpg'
     },
     size: {
         type: Number,
@@ -18,7 +18,7 @@ const size1 = ref(props.size)
 <template>
     <div class="background" arcoblue-6>
         <a-avatar shape="square" class="hvr-grow" :size="40" mt-10 :style="{ width: '3vw', height: '3vw' }">
-            <img alt="avatar" :src="src1" />
+            <img alt="avatar" src="/src/assets/touxiang1.jpg" />
         </a-avatar>
         <div class="icons" flex flex-col justify-center>
             <a-space direction="vertical" fill size="large">
@@ -33,7 +33,8 @@ const size1 = ref(props.size)
 </template>
 <style lang="scss" scoped>
 .background {
-    background-color: #6666FF;
+    //background-color: #6666FF;
+    background-color: #335eb3;
     height: 100%;
     width: 100%;
 }

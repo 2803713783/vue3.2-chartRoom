@@ -1,5 +1,5 @@
 <template>
-    <div mt-5 gap-10><i v-bind:style="{ width: size, height: size }" @click="changeDark(); toggleDark()" icon-btn
+    <div mt-5 gap-10><i :style="{ width: size, height: size }" @click="changeDark(); toggleDark()" icon-btn
             dark:i-carbon-moon i-carbon-sun />
 
     </div>

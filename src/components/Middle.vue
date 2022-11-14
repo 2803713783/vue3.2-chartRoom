@@ -3,12 +3,12 @@
         <div class="top flex justify-start items-center p-l-10 ">
             <a-badge class="hvr-float-shadow" :count="9" color="#00B42A" :dotStyle="{ width: '10px', height: '10px' }">
                 <a-avatar shape="square" :size="50" :style="{ width: '2vw', height: '2vw' }">
-                    <img alt="avatar" src="src/assets/touxiang2.png" />
+                    <img alt="avatar" src="/src/assets/touxiang2.png" />
                 </a-avatar>
             </a-badge>
-            <div flex flex-col justify-center items-start color-dark m-l-10>
-                <span class="hvr-underline-from-center">yunxia</span>
-                <div>咯噔，咯噔，咯噔~</div>
+            <div class="nameAndSign" flex flex-col justify-between items-start color-dark m-l-10>
+                <span class="nickName hvr-shadow" font-bold>yunxia</span>
+                <span text-sm class="hvr-shadow">咯噔，咯噔，咯噔~</span>
             </div>
         </div>
         <div class=" mainView ">
@@ -17,7 +17,9 @@
                 <a-layout-content class="chartBody">
                     <ChartBody />
                 </a-layout-content>
-                <a-layout-footer class="sendBody">Footer</a-layout-footer>
+                <a-layout-footer class="sendBody">
+                    <ChartFooter />
+                </a-layout-footer>
             </a-layout>
         </div>
     </div>
@@ -25,6 +27,7 @@
 
 <script setup>
 import ChartBody from './ChartBody.vue';
+import ChartFooter from './ChartFooter.vue';
 </script>
 
 <style lang="scss" scoped>
@@ -40,6 +43,16 @@ import ChartBody from './ChartBody.vue';
         box-shadow: 0px 7px 7px -7px #5E5E5E;
     }
 
+    .nameAndSign {
+        height: 2vw;
+        color: #6aa1ff;
+
+        .nickName {
+            line-height: 100%;
+        }
+    }
+
+
     .mainView {
         top: 1%;
         position: relative;
@@ -50,7 +63,7 @@ import ChartBody from './ChartBody.vue';
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
         :deep(.arco-layout-footer) {
-            background-color: var(--color-primary-light-4);
+            border-top: 1px solid #ddd;
         }
 
         .chartBody {
