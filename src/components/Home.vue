@@ -26,7 +26,7 @@ import Right from './Right.vue'
                 </a-layout-content>
                 <a-layout-sider style="width: 25vw;" :resize-directions="['left']">
                     <Right />
-                    <a-layout-footer>Footer</a-layout-footer>
+
                 </a-layout-sider>
             </a-layout>
 
@@ -57,7 +57,7 @@ import Right from './Right.vue'
 .layoutAll :deep(.arco-layout-header) {
     height: 7vh;
     //background-color: var(--color-primary-light-4);
-    background-color: #335eb3;
+    // background-color: #335eb3;
 }
 
 
