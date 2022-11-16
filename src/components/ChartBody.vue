@@ -100,6 +100,7 @@ import { ref, reactive } from 'vue'
             .lmessageBodyBottom {
                 font-size: .8rem;
                 margin-top: 5px;
+                letter-spacing: 2px;
                 color: #335eb3;
                 display: block;
                 width: max-content;
@@ -128,6 +129,7 @@ import { ref, reactive } from 'vue'
         .rmessage {
             width: max-content;
             max-width: 45%;
+
             padding: 20px 30px 10px 30px;
             text-align: left;
             margin-right: 20px;
@@ -144,6 +146,7 @@ import { ref, reactive } from 'vue'
             .rmessageBodyBottom {
                 font-size: .8rem;
                 margin: 5px 10px 0 0;
+                letter-spacing: 2px;
                 color: #fff;
                 right: 0;
                 display: block;

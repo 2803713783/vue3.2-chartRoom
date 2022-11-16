@@ -1,5 +1,10 @@
 <script setup>
+import { useRouter } from 'vue-router'
+const router = useRouter()
 
+const login = () => {
+    router.push({ name: 'login' }).catch(err => { console.log('err', err) })
+}
 </script>
 <template>
     <div class="background ">
@@ -8,7 +13,7 @@
             <div class="ChartName" flex items-center justify-between>
                 <!-- <div class="name" font-600 text-left>聊天室</div>
                 <div class="Logo"></div> -->
-                <img src="/src/assets/logo.png" alt="妄想社OA" m-b-20>
+                <img @click="login" src="/src/assets/logo.png" alt="妄想社OA" m-b-20>
             </div>
             <a-space>
                 <a-select :options="['Option1', 'Option2', 'Option3']" :style="{ height: '3vh', fontSize: '1rem' }"

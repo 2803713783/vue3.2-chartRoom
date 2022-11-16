@@ -18,10 +18,10 @@ const images = reactive([
             <a-avatar class="hvr-grow touxiang" :size="20" mt-50 mb-20 :style="{ width: '3vw', height: '3vw' }">
                 <img alt="avatar" src="/src/assets/touxiang1.jpg" />
             </a-avatar>
-            <div class="name" font-600>妄想社成员</div>
+            <div class="name color-#fff" font-600>妄想社成员</div>
             <div class="addressIcon">
-                <i class="i-carbon-location  text-18  color-#333 hvr-grow" icon-btn></i>
-                <div class="address">San Fransisco, CA</div>
+                <i class="i-carbon-location color-#fff text-18   hvr-grow" icon-btn></i>
+                <div class="address color-#fff">San Fransisco, CA</div>
             </div>
             <div class="imgs ">
                 <a-carousel :autoPlay="true" indicator-class="lunbo" animation-name="fade" show-arrow="never"
@@ -29,7 +29,6 @@ const images = reactive([
                         height: '100%',
                         width: '95%',
                         margin: 'auto',
-                    
                     }">
                     <a-carousel-item v-for="image in images" :style="{
                         height: '100%',
@@ -59,7 +58,7 @@ const images = reactive([
                 <i class="i-carbon-user-follow text-20  color-#335eb3 hvr-grow" icon-btn></i>
             </div>
             <div class="iconItem" justify-center items-center>
-                <i class="i-carbon-phone-off-filled text-20  color-#335eb3 hvr-grow" icon-btn></i>
+                <i class="i-carbon-email text-20  color-#335eb3 hvr-grow" icon-btn></i>
             </div>
         </div>
 
@@ -82,6 +81,7 @@ const images = reactive([
         position: relative;
         background-color: rgba(0, 0, 0, 0);
         margin-bottom: 5px;
+        color: #fff;
     }
 
     .imgs {
@@ -100,16 +100,14 @@ const images = reactive([
         margin-top: 5px;
         width: 100%;
 
-    }
-
-    .iconItem {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background-color: #fff;
-        display: flex;
-        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-
+        .iconItem {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #fff;
+            display: flex;
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+        }
     }
 
     .iconItem:hover {
