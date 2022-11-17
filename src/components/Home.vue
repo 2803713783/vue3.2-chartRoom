@@ -1,12 +1,15 @@
 <script setup>
-import Left1 from './Left1.vue'
-import Left2 from './Left2.vue'
-import Middle from './Middle.vue'
-import Right from './Right.vue'
+import Left1 from './navLeft/Left1.vue'
+import { onMounted } from 'vue'
+import { useRouter } from 'vue-router'
+const router = useRouter()
+onMounted(() => {
+
+    router.push({ name: 'chart' }).catch(err => { console.log('err', err) })
 
 
+})
 </script>
-
 
 <template>
     <div class="layoutAll">
@@ -18,15 +21,13 @@ import Right from './Right.vue'
                 <a-layout-sider style="width: 4vw;">
                     <Left1 />
                 </a-layout-sider>
-                <a-layout-sider style="width: 25vw;">
-                    <Left2 />
-                </a-layout-sider>
-                <a-layout-content>
-                    <Middle />
-                </a-layout-content>
-                <a-layout-sider style="width: 25vw;" :resize-directions="['left']">
-                    <Right />
-
+                <a-layout-sider :style="{ width: '96vw' }">
+                    <router-view v-slot="{ Component }">
+                        <transition name="slide-right">
+                            <component :is="Component" />
+                        </transition>
+                    </router-view>
+                    <!-- <Chart /> -->
                 </a-layout-sider>
             </a-layout>
 
@@ -49,6 +50,8 @@ import Right from './Right.vue'
     text-align: center;
 }
 
+.layoutAll :deep(.arco-layout-sider-children) {}
+
 .layoutBody :deep(.arco-layout-sider),
 .layoutBody :deep(.arco-layout-content) {
     height: 100vh;
@@ -58,15 +61,6 @@ import Right from './Right.vue'
     height: 7vh;
     //background-color: var(--color-primary-light-4);
     // background-color: #335eb3;
-}
-
-
-
-
-.layoutAll :deep(.arco-layout-sider) {
-    //background-color: var(--color-primary-light-3);
-    max-width: 25vw;
-
 }
 
 .layoutAll :deep(.arco-layout-content) {
