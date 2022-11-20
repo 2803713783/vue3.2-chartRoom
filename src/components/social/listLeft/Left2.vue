@@ -103,7 +103,7 @@ const login = () => {
         box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
         margin: 10px auto;
         width: 90%;
-        border-radius: 8px;
+        border-radius: 16px;
         display: flex;
         justify-content: start;
         align-items: center;
@@ -135,19 +135,16 @@ const login = () => {
         margin: 0 auto 20px;
         width: 90%;
         background: #fff;
-        border-radius: 8px;
+        border-radius: 16px;
         border-left-width: 20px;
         border-left-color: #00b42a;
-
     }
-
-
 
     .list-demo-action-layout .image-area {
 
 
         img {
-            border-radius: 8px;
+            border-radius: 16px;
             object-fit: cover;
             object-position: center;
             max-width: 100%;
@@ -201,7 +198,7 @@ const login = () => {
         background-color: #f0f8ff;
         opacity: 1;
         z-index: 2;
-        width: 25vw;
+
     }
 }
 </style>

@@ -17,4 +17,18 @@
         width: 0 !important
     }
 
+    border-radius: 16px;
+
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
