@@ -14,6 +14,10 @@ const routes = [{
         component: () => import('@/components/Home.vue'),
         redirect: '/chart',
         children: [{
+            path: '/social',
+            name: 'social',
+            component: () => import('@/components/social/Social.vue'),
+        }, {
             path: '/chart',
             name: 'chart',
             component: () => import('@/components/chartRoom/Chart.vue'),

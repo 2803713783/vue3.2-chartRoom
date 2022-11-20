@@ -13,7 +13,8 @@
     letter-spacing: .1rem;
     font-weight: lighter;
 
-    a {
-        color: red;
+    ::-webkit-scrollbar {
+        width: 0 !important
     }
+
 }

@@ -60,7 +60,7 @@ const login = () => {
         height: 14%;
         box-shadow: 0px 2px 5px -2px #5E5E5E;
         // margin: 20px 0;
-        padding: 1% 10px;
+        padding: 2vh 10px;
         position: fixed;
         top: 0;
         background-color: #fff;

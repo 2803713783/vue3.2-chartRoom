@@ -9,7 +9,7 @@
                     <i class="i-carbon-ibm-watson-knowledge-catalog text-25   hvr-grow" icon-btn></i>
                 </div>
                 <div class="iconItem" justify-center items-center>
-                    <i class="i-carbon-dashboard text-25   hvr-grow" icon-btn></i>
+                    <i class="i-carbon-chart-sunburst text-25   hvr-grow" icon-btn></i>
                 </div>
                 <div class="iconItem" justify-center items-center>
                     <i class="i-carbon-network-3 text-25   hvr-grow" icon-btn></i>
@@ -34,6 +34,7 @@ import RightDynamicVue from './RightDynamic.vue';
     background-color: #335eb3;
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
 
     .icons {
         gap: 20px;

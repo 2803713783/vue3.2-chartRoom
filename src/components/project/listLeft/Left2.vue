@@ -25,7 +25,7 @@ const login = () => {
         <a-list :size="small" class="list">
             <a-list-item v-for="idx in 40" :key="idx" class="listItem hvr-grow">
                 <a-list-item-meta :style="{ fontWeight: '600' }" title="Girl Friend" text-left
-                    description="Ltd. is an enterprise located in China.Ltd. ">
+                    description="66666Ltd. is an enterprise located in China.Ltd. ">
                     <template #avatar>
                         <a-badge :count="9" color="#00B42A" :dotStyle="{ width: '10px', height: '10px' }">
                             <a-avatar :size="50">

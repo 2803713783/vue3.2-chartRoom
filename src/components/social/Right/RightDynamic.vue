@@ -99,7 +99,6 @@ const images = reactive([
 
     .touxiang {
         box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-        filter: drop-shadow(0 0 2px #fff);
     }
 
     .icons {
@@ -133,7 +132,6 @@ const images = reactive([
         color: #333;
         font-weight: 500;
         gap: 5px;
-        filter: drop-shadow(0 0 2px #fff);
 
 
     }

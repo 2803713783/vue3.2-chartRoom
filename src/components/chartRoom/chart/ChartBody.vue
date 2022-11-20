@@ -132,7 +132,7 @@ import { ref, reactive } from 'vue'
 
             padding: 20px 30px 10px 30px;
             text-align: left;
-            margin-right: 20px;
+            margin-right: 30px;
             margin-bottom: 20px;
             background-color: #335eb3;
             color: #fff;

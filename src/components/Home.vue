@@ -5,7 +5,7 @@ import { useRouter } from 'vue-router'
 const router = useRouter()
 onMounted(() => {
 
-    router.push({ name: 'chart' }).catch(err => { console.log('err', err) })
+    // router.push({ name: 'chart' }).catch(err => { console.log('err', err) })
 
 
 })
@@ -23,10 +23,14 @@ onMounted(() => {
                 </a-layout-sider>
                 <a-layout-sider :style="{ width: '96vw' }">
                     <router-view v-slot="{ Component }">
-                        <transition name="slide-right">
-                            <component :is="Component" />
+                        <transition name="fade" mode="out-in">
+                            <keep-alive>
+                                <component :is="Component" />
+                            </keep-alive>
                         </transition>
                     </router-view>
+
+                    <!-- <router-view></router-view> -->
                     <!-- <Chart /> -->
                 </a-layout-sider>
             </a-layout>
@@ -37,6 +41,33 @@ onMounted(() => {
 
 </template> 
 <style lang="scss" scoped>
+.fade-enter-from,
+.fade-leave-to {
+    /*定义进入开始和离开结束的透明度为0*/
+    opacity: 0;
+}
+
+.fade-leave-to {
+    transform: translateX(20px);
+}
+
+.fade-enter-to {
+    transform: translateX(0px);
+}
+
+.fade-enter-to,
+.fade-leave-from {
+    /*定义进入结束和离开开始的透明度为1*/
+    opacity: 1;
+}
+
+.fade-leave-active,
+.fade-enter-active {
+    transition: all 0.6s ease-out;
+}
+
+
+
 .layoutAll :deep(.arco-layout-header),
 .layoutAll :deep(.arco-layout-footer),
 .layoutAll :deep(.arco-layout-sider-children),
@@ -65,7 +96,6 @@ onMounted(() => {
 
 .layoutAll :deep(.arco-layout-content) {
     background-color: aliceblue;
-
 }
 </style>
 
