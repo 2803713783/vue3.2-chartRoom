@@ -61,18 +61,18 @@ const login = () => {
         box-shadow: 0px 2px 5px -2px #5E5E5E;
         // margin: 20px 0;
         padding: 2vh 10px;
-        position: fixed;
+        position: relative;
         top: 0;
         background-color: #fff;
         opacity: 1;
         z-index: 2;
-        width: 25vw;
+        width: 20vw;
 
     }
 }
 
 .list {
-    margin-top: 14vh;
+
     overflow-y: scroll;
     max-height: 86vh;
 }

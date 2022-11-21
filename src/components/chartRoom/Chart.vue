@@ -1,7 +1,7 @@
 <script setup>
 import Left2 from './listLeft/Left2.vue'
 import Middle from './chart/Middle.vue'
-import Right from './Dynamic/Right.vue'
+
 
 
 </script>
@@ -20,13 +20,10 @@ import Right from './Dynamic/Right.vue'
                 <a-layout-sider style="width: 25vw;">
                     <Left2 />
                 </a-layout-sider>
-                <a-layout-content style="width: 25vw;">
+                <a-layout-content>
                     <Middle />
                 </a-layout-content>
-                <a-layout-sider style="width: 25vw;" :resize-directions="['left']">
-                    <Right />
 
-                </a-layout-sider>
             </a-layout>
 
         </a-layout>
@@ -69,7 +66,7 @@ import Right from './Dynamic/Right.vue'
 
 .layoutAll :deep(.arco-layout-sider) {
     //background-color: var(--color-primary-light-3);
-    max-width: 25vw;
+    max-width: 20vw;
 
 }
 

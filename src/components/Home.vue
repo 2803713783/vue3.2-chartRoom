@@ -1,7 +1,9 @@
 <script setup>
+import Right from './Right/Right.vue'
 import Left1 from './navLeft/Left1.vue'
 import { onMounted } from 'vue'
 import { useRouter } from 'vue-router'
+
 const router = useRouter()
 onMounted(() => {
 
@@ -21,7 +23,7 @@ onMounted(() => {
                 <a-layout-sider style="width: 4vw;">
                     <Left1 />
                 </a-layout-sider>
-                <a-layout-sider :style="{ width: '96vw' }">
+                <a-layout-content :style="{ width: '73vw' }" :resize-directions="['right']">
                     <router-view v-slot="{ Component }">
                         <transition name="fade" mode="out-in">
                             <keep-alive>
@@ -32,8 +34,14 @@ onMounted(() => {
 
                     <!-- <router-view></router-view> -->
                     <!-- <Chart /> -->
+                </a-layout-content>
+                <a-layout-sider :style="{ width: '20vw', minWidth: '0', maxWidth: '20vw' }"
+                    :resize-directions="['left']">
+
+                    <Right />
                 </a-layout-sider>
             </a-layout>
+
 
         </a-layout>
     </div>
@@ -79,20 +87,21 @@ onMounted(() => {
     font-size: 1em;
     font-stretch: condensed;
     text-align: center;
+    background-color: #f0f8ff;
 }
 
 .layoutAll :deep(.arco-layout-sider-children) {}
 
 .layoutBody :deep(.arco-layout-sider),
-.layoutBody :deep(.arco-layout-content) {
-    height: 100vh;
-}
+.layoutBody :deep(.arco-layout-content) {}
 
 .layoutAll :deep(.arco-layout-header) {
     height: 7vh;
     //background-color: var(--color-primary-light-4);
     // background-color: #335eb3;
 }
+
+
 
 .layoutAll :deep(.arco-layout-content) {
     background-color: aliceblue;

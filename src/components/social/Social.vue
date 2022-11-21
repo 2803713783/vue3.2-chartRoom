@@ -1,7 +1,7 @@
 <script setup>
 import Left2 from './listLeft/Left2.vue'
 import SocialBody from './SocialBody/Body.vue'
-import Right from './Right/Right.vue'
+// import Right from './Right/Right.vue'
 
 
 </script>
@@ -20,13 +20,12 @@ import Right from './Right/Right.vue'
                 <a-layout-sider style="width: 20vw;">
                     <Left2 />
                 </a-layout-sider>
-                <a-layout-content style="width: 0vw;">
+                <a-layout-content>
                     <SocialBody />
                 </a-layout-content>
-                <a-layout-sider style="width: 20vw;" :resize-directions="['left']">
+                <!-- <a-layout-sider style="width: 20vw;" :resize-directions="['left']">
                     <Right />
-
-                </a-layout-sider>
+                </a-layout-sider> -->
             </a-layout>
 
         </a-layout>
@@ -74,10 +73,7 @@ import Right from './Right/Right.vue'
 
 }
 
-.layoutAll :deep(.arco-layout-content) {
-    background-color: aliceblue;
-
-}
+.layoutAll :deep(.arco-layout-content) {}
 </style>
 
 

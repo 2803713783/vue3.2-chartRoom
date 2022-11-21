@@ -19,6 +19,9 @@ import './style.css'
 /** 引入uno.css，不引入不生效 */
 import 'uno.css'
 import 'hover.css'
+
+import vue3videoPlay from 'vue3-video-play' // 引入组件
+import 'vue3-video-play/dist/style.css' // 引入css
 //状态
 import store from './store'
-createApp(App).use(ArcoVue).use(ArcoVueIcon).use(router).use(store).mount('#app')
+createApp(App).use(ArcoVue).use(vue3videoPlay).use(ArcoVueIcon).use(router).use(store).mount('#app')
