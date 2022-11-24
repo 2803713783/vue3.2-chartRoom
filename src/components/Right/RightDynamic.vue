@@ -88,12 +88,14 @@ const images = reactive([
         position: absolute;
         width: 100%;
         z-index: -1;
+        min-height: 200px;
 
         .imgLunbo {
             border-radius: 8px;
             object-fit: cover;
             object-position: center;
             max-width: 100%;
+
         }
     }
 
@@ -105,6 +107,7 @@ const images = reactive([
         gap: 20px;
         margin-top: 5px;
         width: 20vw;
+        position: relative;
 
         .iconItem {
             width: 5vh;

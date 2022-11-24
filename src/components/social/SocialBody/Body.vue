@@ -5,7 +5,7 @@ const options = reactive({
     height: "100%", //播放器高度
     color: "#409eff", //主题色
     title: "", //视频名称
-    src: "/src/assets/video/wanxia.mp4", //视频源
+    src: "./assets/video/wanxia.mp4", //视频源
     muted: false, //静音
     webFullScreen: false,
     speedRate: ["0.75", "1.0", "1.25", "1.5", "2.0"], //播放倍速
@@ -175,7 +175,7 @@ const options = reactive({
             </div>
             <div class="middle">
                 <div class="video flexColumn">
-                    <vue3VideoPlay v-bind="options" />
+                    <vue3VideoPlay v-bind="options" src="/src/assets/video/wanxia.mp4" />
                 </div>
                 <div class="text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nulla dolor, ornare at commodo

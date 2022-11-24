@@ -2,6 +2,10 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 
+
+const index = () => {
+    router.push({ name: 'index' }).catch(err => { console.log('err', err) })
+}
 const router = useRouter()
 
 const container = ref(null)
@@ -57,13 +61,14 @@ const login = () => {
                         <i class="i-carbon-user-avatar text-20  color-#335eb3 hvr-grow" icon-btn></i>
                         <input type="text" placeholder="用户名" />
                     </div>
-                    <div class="input-field " flex justify-start items-center>
-                        <i class="i-carbon-email text-20  color-#335eb3 hvr-grow" icon-btn></i>
-                        <input type="email" placeholder="Email" />
-                    </div>
+
                     <div class="input-field " flex justify-start items-center>
                         <i class="i-carbon-password text-20  color-#335eb3 hvr-grow" icon-btn></i>
                         <input type="password" autocomplete placeholder="密码" />
+                    </div>
+                    <div class="input-field " flex justify-start items-center>
+                        <i class="i-carbon-email text-20  color-#335eb3 hvr-grow" icon-btn></i>
+                        <input type="email" placeholder="Email" />
                     </div>
                     <input type="submit" class="btn hvr-grow" value="注册" />
                     <p class="social-text">或者使用第三方账号登录</p>
@@ -88,7 +93,7 @@ const login = () => {
         <div class="panels-container">
             <div class="panel left-panel">
                 <div class="content">
-                    <img class=" logo1 hvr-grow" src="/src/assets/logo.png" alt="妄想社OA">
+                    <img @click="index" class="logo1  hvr-grow" src="/src/assets/logoBlackNoBackgroung.png" alt="妄想社OA">
                     <h3>“ 新来的 ? ”</h3>
                     <p>
                         “ 想要成为我们的一员吗？ ”
@@ -101,7 +106,7 @@ const login = () => {
             </div>
             <div class="panel right-panel">
                 <div class="content">
-                    <img class="logo hvr-grow" src="/src/assets/logo.png" alt="妄想社OA">
+                    <img @click="index" class="logo hvr-grow" src="/src/assets/logo.png" alt="妄想社OA">
                     <h3>“ 我们的一员 ? ”</h3>
                     <p text-20>
                         " 欢迎回来！"

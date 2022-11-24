@@ -1,5 +1,4 @@
 <script setup>
-import { reactive } from 'vue'
 import { useRouter } from 'vue-router'
 const router = useRouter()
 
@@ -26,8 +25,8 @@ const dataSource = new Array(15).fill(null).map((_, index) => {
     };
 });
 
-const login = () => {
-    router.push({ name: 'login' }).catch(err => { console.log('err', err) })
+const index = () => {
+    router.push({ name: 'index' }).catch(err => { console.log('err', err) })
 }
 </script>
 <template>
@@ -37,7 +36,7 @@ const login = () => {
             <div class="ChartName">
                 <!-- <div class="name" font-600 text-left>聊天室</div>
                 <div class="Logo"></div> -->
-                <img @click="login" src="/src/assets/logo.png" alt="妄想社OA" m-b-20>
+                <img @click="index" src="/src/assets/logo.png" alt="妄想社OA" m-b-20>
             </div>
             <!-- <div class="redian" flex justify-start gap-20 items-center>
                 <icon-fire class="hvr-grow icon" :size="20" :strokeLinecap="round" />

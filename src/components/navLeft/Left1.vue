@@ -1,5 +1,11 @@
 <script setup>
 import { ref } from 'vue';
+import { useRouter } from 'vue-router'
+const router = useRouter()
+
+const login = () => {
+    router.push({ name: 'login' }).catch(err => { console.log('err', err) })
+}
 const props = defineProps({
     src: {
         type: String,
@@ -22,18 +28,32 @@ const size1 = ref(props.size)
         </a-avatar>
         <div class="icons" flex flex-col justify-center>
             <a-space direction="vertical" fill size="large">
+                <a-tooltip content="Conversation" position="rt" :content-style="{ color: '#335eb3' }"
+                    background-color="#fff">
+                    <router-link exact-active-class="eac" active-class="active" to="/chart">
+                        <icon-message class="hvr-bounce-in icon" :size="size1" :strokeLinecap="round" />
+                    </router-link>
+                </a-tooltip>
+                <a-tooltip content="Social Space" position="rt" :content-style="{ color: '#335eb3' }"
+                    background-color="#fff">
+                    <router-link exact-active-class="eac" active-class="active" to="/social">
+                        <icon-thumb-up class="hvr-bounce-in icon" :size="size1" :strokeLinecap="round" />
+                    </router-link>
+                </a-tooltip>
+                <a-tooltip content="Work Space" position="rt" :content-style="{ color: '#335eb3' }"
+                    background-color="#fff">
+                    <icon-apps exact-active-class="eac" class="hvr-bounce-in icon" :size="size1"
+                        :strokeLinecap="round" />
+                </a-tooltip>
+                <a-tooltip content="Setting" position="rt" :content-style="{ color: '#335eb3' }"
+                    background-color="#fff">
+                    <icon-settings spin class="hvr-bounce-in icon" :size="size1" :strokeLinecap="round" />
+                </a-tooltip>
 
-                <router-link exact-active-class="eac" active-class="active" to="/chart">
-                    <icon-message class="hvr-bounce-in icon" :size="size1" :strokeLinecap="round" />
-                </router-link>
-
-
-                <router-link exact-active-class="eac" active-class="active" to="/social">
-                    <icon-thumb-up class="hvr-bounce-in icon" :size="size1" :strokeLinecap="round" />
-                </router-link>
-
-                <icon-apps exact-active-class="eac" class="hvr-bounce-in icon" :size="size1" :strokeLinecap="round" />
-                <icon-settings spin class="hvr-bounce-in icon" :size="size1" :strokeLinecap="round" />
+                <a-tooltip content="Log out" position="rt" :content-style="{ color: '#335eb3' }"
+                    background-color="#fff">
+                    <icon-export @click="login" class="hvr-bounce-in icon" :size="size1" :strokeLinecap="round" />
+                </a-tooltip>
             </a-space>
         </div>
 

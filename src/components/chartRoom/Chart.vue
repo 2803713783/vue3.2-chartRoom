@@ -2,8 +2,6 @@
 import Left2 from './listLeft/Left2.vue'
 import Middle from './chart/Middle.vue'
 
-
-
 </script>
 
 

@@ -29,6 +29,11 @@ const routes = [{
         name: 'login',
         component: () => import('@/components/login/loginAndReg.vue')
     },
+    {
+        path: '/index',
+        name: 'index',
+        component: () => import('@/components/index/index.vue')
+    },
 ]
 const router = createRouter({
     history: createWebHashHistory(),
